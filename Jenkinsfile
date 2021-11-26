@@ -13,7 +13,7 @@ pipeline{
       steps{
         sh returnStatus: true, script: 'terraform workspace new dev'
         sh "terraform init"
-        sh "ansible-playbook terraform.yml"
+        sh "ansible-playbook terraform.yml -all"
       }
     }
 
